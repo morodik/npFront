@@ -1,11 +1,11 @@
 Passwordless аутентификация на основе Ed25519 + JWT.
 Вместо пароля криптографическая подпись. Приватный ключ никогда не покидает устройство пользователя.
 Репозитории
-Backend: 
+Backend: https://github.com/morodik/npAuth
 Frontend: этот репозиторий
 
 Стек
-Backend:
+Backend: 
 Go — net/http
 PostgreSQL — хранилище пользователей и челленджей
 GORM — ORM и автомиграции
