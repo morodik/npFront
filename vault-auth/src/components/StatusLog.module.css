@@ -1,0 +1,29 @@
+.log {
+  margin-top: 1.4rem;
+  min-height: 20px;
+}
+
+.line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 11px;
+  line-height: 1.7;
+  animation: fadein 0.2s ease both;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.prefix {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.info .text { color: var(--muted); }
+.ok   .text { color: var(--green); }
+.err  .text { color: var(--red);   }
+.warn .text { color: var(--amber); }
+.work .text { color: var(--text);  }
