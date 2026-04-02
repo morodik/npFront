@@ -17,7 +17,7 @@ export function Dashboard({ session, onSignOut }) {
 
       {/* Top bar */}
       <div className={styles.topbar}>
-        <span className={styles.topbarBrand}>Vault</span>
+        <span className={styles.topbarBrand}>mrdk</span>
         <div className={styles.topbarRight}>
           <span className={styles.topbarLogin}>{session.login}</span>
           <button className={styles.signoutBtn} onClick={onSignOut}>Выйти</button>
@@ -45,16 +45,12 @@ export function Dashboard({ session, onSignOut }) {
         <InfoBlock title="Сессия">
           <InfoRow k="Логин"    v={session.login}            vClass="hi" />
           <InfoRow k="Тип"      v={isRegister ? 'Новый аккаунт' : 'Существующий аккаунт'} />
-          <InfoRow k="Метод"    v="passwordless / Ed25519" />
           <InfoRow k="Статус"   v="● authenticated"          vClass="ok" />
           <InfoRow k="Время"    v={`${timeStr} · ${dateStr}`} />
         </InfoBlock>
 
         {/* Crypto info */}
         <InfoBlock title="Криптография">
-          <InfoRow k="Алгоритм"       v="Ed25519 (Edwards-curve DSA)" />
-          <InfoRow k="Ключ"           v="32 байта · детерминированный" />
-          <InfoRow k="Подпись"        v="64 байта" />
           <InfoRow k="Приватный ключ" v="сохранён на устройстве (localStorage)" vClass="ok" />
           {session.publicKeyHex && (
             <InfoRow k="Публичный ключ" v={trunc(session.publicKeyHex, 48)} vClass="mono" />
@@ -71,7 +67,7 @@ export function Dashboard({ session, onSignOut }) {
       </div>
 
       <footer className={styles.footer}>
-        Ed25519 · @noble/ed25519 · приватный ключ хранится в localStorage
+        Ed25519 · @noble/ed25519 · mrdk
       </footer>
     </div>
   )

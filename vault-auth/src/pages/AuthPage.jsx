@@ -98,8 +98,7 @@ export function AuthPage({ onAuthenticated }) {
 
         {/* Brand */}
         <div className={styles.brand}>
-          <span className={styles.brandName}>Vault</span>
-          <span className={styles.brandTag}>passwordless</span>
+          <span className={styles.brandName}>mrdk</span>
         </div>
 
         {/* Mode toggle */}
